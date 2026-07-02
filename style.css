@@ -21,16 +21,17 @@ body {
 }
 
 .hero h1 {
-    margin-bottom: 50px;
+    margin-bottom: 60px; /* Mer luft ovanför logotypen */
 }
-
 
 .logo {
     width: auto;
     height: auto;
     margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 
 /* Navigation */
 .navbar {
@@ -78,6 +79,7 @@ body {
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.25);
     background: white;
+    cursor: pointer; /* Viktigt för klickbarhet */
 }
 
 /* Footer */
@@ -88,3 +90,68 @@ body {
     color: white;
     margin-top: 40px;
 }
+
+/* ----------------------------- */
+/* ⭐ MODAL + PILAR FÖR GALLERI ⭐ */
+/* ----------------------------- */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* Stäng-knapp */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+/* Pilar */
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+.arrow:hover {
+    color: #ccc;
+}
+

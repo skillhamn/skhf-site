@@ -17,7 +17,6 @@
     <p>En trygg och välskött hamn i hjärtat av Billdal</p>
 </header>
 
-
 <nav class="navbar">
     <a href="#om">Om föreningen</a>
     <a href="#medlemskap">Medlemskap</a>
@@ -29,37 +28,37 @@
     <h2>Om föreningen</h2>
     <p>
         Södra Killingsholmens Hamnförening (SKHF) arbetar för en säker, trivsam och välskött hamnmiljö
-        för våra medlemmar vid Killingsholmen 9.     </p>
+        för våra medlemmar vid Killingsholmen 9.
+    </p>
 </section>
 
 <section id="medlemskap" class="section">
     <h2>Medlemskap</h2>
     <p>
-        Som medlem i SKHF får du tillgång tillmöjlighet att delta i
-        föreningens arbete och aktiviteter. 
-        För närvarande så är det kostnadsfritt att bli medlem i föreningen.
-        </p>
-        <p>
-        Ansök om medlemskap här: 
+        Som medlem i SKHF får du tillgång till möjlighet att delta i föreningens arbete och aktiviteter.
+        För närvarande är det kostnadsfritt att bli medlem i föreningen.
+    </p>
+    <p>
+        Ansök om medlemskap här:
         <a href="https://forms.cloud.microsoft/r/vcxnV9UrLb?origin=lprLink" target="_blank">
-        Medlemsansökan till Södra Killingsholmens Hamnförening
+            Medlemsansökan till Södra Killingsholmens Hamnförening
         </a>
-        </p>
+    </p>
 </section>
 
 <section id="galleri" class="section">
     <h2>Galleri</h2>
     <div class="gallery">
 
-        <img src="images/gallery/KH9.jpg" alt="KH9">
-        <img src="images/gallery/Båtplats.jpeg" alt="Båtplats">
-        <img src="images/gallery/Kompass C.jpeg" alt="Kompass">
-        <img src="images/gallery/IMG_1267.jpeg" alt="Hamnvy">
-        <img src="images/gallery/Killingsholmen 9 karta.png" alt="Karta Killingsholmen 9">
-        <img src="images/gallery/Killingsholmen 9 planritning.jpg" alt="Planritning Killingsholmen 9">
-        <img src="images/gallery/Sjöbodar KH9.jpg" alt="Sjöbodar">
-        <img src="images/gallery/Start.png" alt="Startbild">
-        <img src="images/gallery/Killingsholmen 9.png" alt="Killingsholmen 9">
+        <img src="images/gallery/KH9.jpg" alt="KH9" onclick="openModal(0)">
+        <img src="images/gallery/Båtplats.jpeg" alt="Båtplats" onclick="openModal(1)">
+        <img src="images/gallery/Kompass C.jpeg" alt="Kompass" onclick="openModal(2)">
+        <img src="images/gallery/IMG_1267.jpeg" alt="Hamnvy" onclick="openModal(3)">
+        <img src="images/gallery/Killingsholmen 9 karta.png" alt="Karta Killingsholmen 9" onclick="openModal(4)">
+        <img src="images/gallery/Killingsholmen 9 planritning.jpg" alt="Planritning Killingsholmen 9" onclick="openModal(5)">
+        <img src="images/gallery/Sjöbodar KH9.jpg" alt="Sjöbodar" onclick="openModal(6)">
+        <img src="images/gallery/Start.png" alt="Startbild" onclick="openModal(7)">
+        <img src="images/gallery/Killingsholmen 9.png" alt="Killingsholmen 9" onclick="openModal(8)">
 
     </div>
 </section>
@@ -67,14 +66,67 @@
 <section id="kontakt" class="section">
     <h2>Kontakt</h2>
     <p>
-        <strong>E-post:</strong> skillhamn@outlook.com<br>
-        <strong>Adress:</strong> Killingsholmen 9, Billdal
+        <strong>E-post:</strong> skillhamn
     </p>
 </section>
 
-<footer class="footer">
-    <p>© 2026 Södra Killingsholmens Hamnförening</p>
-</footer>
+<!-- ⭐ MODAL MED PILAR ⭐ -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <span class="arrow left" onclick="prevImage()">&#10094;</span>
+    <span class="arrow right" onclick="nextImage()">&#10095;</span>
+
+    <img class="modal-content" id="modalImage">
+</div>
+
+<!-- ⭐ JAVASCRIPT FÖR MODAL + PILAR ⭐ -->
+<script>
+const galleryImages = [
+    "images/gallery/KH9.jpg",
+    "images/gallery/Båtplats.jpeg",
+    "images/gallery/Kompass C.jpeg",
+    "images/gallery/IMG_1267.jpeg",
+    "images/gallery/Killingsholmen 9 karta.png",
+    "images/gallery/Killingsholmen 9 planritning.jpg",
+    "images/gallery/Sjöbodar KH9.jpg",
+    "images/gallery/Start.png",
+    "images/gallery/Killingsholmen 9.png"
+];
+
+let currentIndex = 0;
+
+function openModal(index) {
+    currentIndex = index;
+    document.getElementById("imageModal").style.display = "block";
+    document.getElementById("modalImage").src = galleryImages[currentIndex];
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    document.getElementById("modalImage").src = galleryImages[currentIndex];
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    document.getElementById("modalImage").src = galleryImages[currentIndex];
+}
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") closeModal();
+    if (e.key === "ArrowRight") nextImage();
+    if (e.key === "ArrowLeft") prevImage();
+});
+
+document.getElementById("imageModal").onclick = function(e) {
+    if (e.target.id === "imageModal") closeModal();
+};
+</script>
 
 </body>
 </html>
+
