@@ -16,6 +16,11 @@ body {
     color: white;
 }
 
+.hero p {
+    margin-top: 25px;
+}
+
+
 .logo {
     width: auto;
     height: auto;
