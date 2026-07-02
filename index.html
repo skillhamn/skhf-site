@@ -48,19 +48,7 @@
 
 <section id="galleri" class="section">
     <h2>Galleri</h2>
-    <div class="gallery">
-
-        <img src="images/gallery/KH9.jpg" alt="KH9" onclick="openModal(0)">
-        <img src="images/gallery/Båtplats.jpeg" alt="Båtplats" onclick="openModal(1)">
-        <img src="images/gallery/Kompass C.jpeg" alt="Kompass" onclick="openModal(2)">
-        <img src="images/gallery/IMG_1267.jpeg" alt="Hamnvy" onclick="openModal(3)">
-        <img src="images/gallery/Killingsholmen 9 karta.png" alt="Karta Killingsholmen 9" onclick="openModal(4)">
-        <img src="images/gallery/Killingsholmen 9 planritning.jpg" alt="Planritning Killingsholmen 9" onclick="openModal(5)">
-        <img src="images/gallery/Sjöbodar KH9.jpg" alt="Sjöbodar" onclick="openModal(6)">
-        <img src="images/gallery/Start.png" alt="Startbild" onclick="openModal(7)">
-        <img src="images/gallery/Killingsholmen 9.png" alt="Killingsholmen 9" onclick="openModal(8)">
-
-    </div>
+    <div class="gallery" id="galleryContainer"></div>
 </section>
 
 <section id="kontakt" class="section">
@@ -68,15 +56,13 @@
     <p>
         <strong>E‑post:</strong> skillhamn@outlook.com<br>
         <strong>Adress:</strong> Killingsholmen 9, Billdal<br>
-        <strong>Webbplats:</strong> <a href="https://www.skillhamn.se" target="_blank">www.skillhamn.se</a>
+        <strong>Webbplats:</strong> <a href="https://skillhamn.se" target="_blank">skillhamn.se</a>
     </p>
 </section>
-
 
 <footer class="footer">
     <p>© 2026 Södra Killingsholmens Hamnförening</p>
 </footer>
-
 
 <!-- ⭐ MODAL MED PILAR ⭐ -->
 <div id="imageModal" class="modal">
@@ -88,8 +74,9 @@
     <img class="modal-content" id="modalImage">
 </div>
 
-<!-- ⭐ JAVASCRIPT FÖR MODAL + PILAR ⭐ -->
+<!-- ⭐ JAVASCRIPT ⭐ -->
 <script>
+// ⭐ Bildlista – lägg till eller ta bort bilder här
 const galleryImages = [
     "images/gallery/KH9.jpg",
     "images/gallery/Båtplats.jpeg",
@@ -104,6 +91,18 @@ const galleryImages = [
     "images/gallery/Killingsholmen 9.png"
 ];
 
+// ⭐ Bygg galleriet automatiskt
+const galleryContainer = document.getElementById("galleryContainer");
+
+galleryImages.forEach((src, index) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "Galleri bild " + (index + 1);
+    img.onclick = () => openModal(index);
+    galleryContainer.appendChild(img);
+});
+
+// ⭐ Modal-logik
 let currentIndex = 0;
 
 function openModal(index) {
@@ -139,4 +138,3 @@ document.getElementById("imageModal").onclick = function(e) {
 
 </body>
 </html>
-
