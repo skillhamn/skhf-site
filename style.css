@@ -17,9 +17,11 @@ body {
 }
 
 .logo {
-    max-width: 120px;
+    width: auto;
+    height: auto;
     margin-bottom: 20px;
 }
+
 
 /* Navigation */
 .navbar {
