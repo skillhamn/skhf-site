@@ -1,3 +1,4 @@
+/* Grundstil */
 body {
     background-color: #f7f7f7;
     color: #222;
@@ -7,25 +8,22 @@ body {
     padding: 0;
 }
 
-h1, h2, h3 {
-    color: #111;
-}
-
-
+/* Header */
 .hero {
-    background: url('images/header.jpg') center/cover no-repeat;
     text-align: center;
-    padding: 80px 20px;
+    padding: 40px 20px;
+    background: #005bbb;
     color: white;
 }
 
 .logo {
-    width: 120px;
+    max-width: 120px;
     margin-bottom: 20px;
 }
 
+/* Navigation */
 .navbar {
-    background: #003366;
+    background: #003f7d;
     padding: 10px;
     text-align: center;
 }
@@ -37,30 +35,35 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Sektioner */
 .section {
     max-width: 900px;
     margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
+    padding: 0 20px;
 }
 
+.section h2 {
+    color: #111;
+    border-bottom: 2px solid #005bbb;
+    padding-bottom: 5px;
+}
+
+/* Galleri */
 .gallery {
     display: flex;
-    gap: 10px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .gallery img {
-    width: 30%;
+    max-width: 280px;
+    width: 100%;
+    height: auto;
     border-radius: 6px;
-    object-fit: cover;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #003366;
-    color: white;
-    margin-top: 40px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
