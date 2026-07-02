@@ -8,26 +8,28 @@ body {
     padding: 0;
 }
 
-/* Header */
+/* Header – vit bakgrund och blå text */
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background: #005bbb;
-    color: white;
+    background: #ffffff;      /* Vit bakgrund */
+    color: #005bbb;           /* Marin blå text */
 }
 
 .hero p {
     margin-top: 25px;
+    color: #005bbb;           /* Blå underrubrik */
 }
 
 .hero h1 {
-    margin-bottom: 40px; /* Mer luft ovanför logotypen */
+    margin-bottom: 40px;      /* Ditt avstånd */
+    color: #005bbb;           /* Blå rubrik */
 }
 
 .logo {
     width: auto;
     height: auto;
-    margin-bottom: 50px;
+    margin-bottom: 50px;      /* Ditt avstånd */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -79,15 +81,15 @@ body {
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.25);
     background: white;
-    cursor: pointer; /* Viktigt för klickbarhet */
+    cursor: pointer;
 }
 
-/* Footer */
+/* Footer – vit bakgrund och blå text */
 .footer {
     text-align: center;
     padding: 20px;
-    background: #003f7d;
-    color: white;
+    background: #ffffff;      /* Vit bakgrund */
+    color: #005bbb;           /* Blå text */
     margin-top: 40px;
 }
 
@@ -154,4 +156,3 @@ body {
 .arrow:hover {
     color: #ccc;
 }
-
