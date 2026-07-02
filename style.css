@@ -20,6 +20,10 @@ body {
     margin-top: 25px;
 }
 
+.hero h1 {
+    margin-bottom: 80px;
+}
+
 
 .logo {
     width: auto;
