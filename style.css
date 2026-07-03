@@ -17,19 +17,19 @@ body {
 }
 
 .hero p {
-    margin-top: 20px;
+    margin-top: 10px;
     color: #005bbb;           /* Blå underrubrik */
 }
 
 .hero h1 {
-    margin-bottom: 20px;      /* Ditt avstånd */
+    margin-bottom: 10px;      /* Ditt avstånd */
     color: #005bbb;           /* Blå rubrik */
 }
 
 .logo {
     width: auto;
     height: auto;
-    margin-bottom: 15px;      /* Ditt avstånd */
+    margin-bottom: 5px;      /* Ditt avstånd */
     display: block;
     margin-left: auto;
     margin-right: auto;
