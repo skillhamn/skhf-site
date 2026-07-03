@@ -160,20 +160,19 @@ body {
     color: #ccc;
 }
 
-
 /* Mobilanpassning för loggan */
 @media (max-width: 600px) {
     .logo {
-        max-width: 160px;   /* Perfekt mobilstorlek */
+        max-width: 320px;   /* Dubbelt så stor som tidigare */
         height: auto;
-        margin-bottom: 25px; /* Behåller exakt ditt avstånd */
+        margin-bottom: 25px; /* Behåller ditt avstånd */
     }
 
     .hero h1 {
-        font-size: 1.7em;   /* Mer balanserad rubrik på mobil */
+        font-size: 1.9em;   /* Lite större rubrik för balans */
     }
 
     .hero p {
-        font-size: 1.05em;  /* Bättre proportioner */
+        font-size: 1.15em;  /* Bättre proportioner */
     }
 }
