@@ -1,0 +1,104 @@
+/* ====== Grundlayout ====== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* ====== Header / Logotyp ====== */
+
+header.hero {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #ffffff;
+}
+
+.logo {
+    width: 240px;      /* större logga */
+    height: auto;
+}
+
+/* ====== NY REN MENY ====== */
+
+.nav {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-inner {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-inner a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 6px 4px;
+    font-weight: 500;
+}
+
+.nav-inner a:hover {
+    color: #0077cc;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* ===== Mobil ===== */
+@media (max-width: 768px) {
+
+    .nav-inner {
+        display: none;
+        flex-direction: column;
+        gap: 14px;
+        padding-top: 10px;
+    }
+
+    .nav-inner.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* ====== Sektioner ====== */
+
+.section {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+.section ul {
+    padding-left: 20px;
+}
+
+/* ====== Footer ====== */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
