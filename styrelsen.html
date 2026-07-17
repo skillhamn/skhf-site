@@ -13,15 +13,14 @@
     <img src="images/logo.png" alt="SKHF Logotyp" class="logo">
 </header>
 
-<nav id="menu"></nav>
-
-<script>
-fetch("/partials/menu.html")
-  .then(response => response.text())
-  .then(html => {
-      document.getElementById("menu").innerHTML = html;
-  });
-</script>
+<nav class="navbar">
+    <a href="index.html">Start</a>
+    <a href="om-foreningen.html">Om föreningen</a>
+    <a href="styrelsen.html">Styrelsen</a>
+    <a href="stadgar.html">Stadgar</a>
+    <a href="medlemskap.html">Medlemskap</a>
+    <a href="kontakt.html">Kontakt</a>
+</nav>
 
 
 
