@@ -1,0 +1,27 @@
+<nav class="navbar">
+
+    <!-- Hamburger ikon (mobil) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Menyblock -->
+    <div class="menu" id="menu">
+        <a href="index.html">Start</a>
+
+        <div class="dropdown">
+            <a href="om-foreningen.html" class="dropdown-main">Om föreningen</a>
+            <div class="dropdown-content">
+                <a href="styrelsen.html">Styrelsen</a>
+                <a href="stadgar.html">Stadgar</a>
+            </div>
+        </div>
+
+        <a href="medlemskap.html">Medlemskap</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+</nav>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("open");
+}
+</script>
