@@ -13,7 +13,15 @@
     <img src="images/logo.png" alt="SKHF Logotyp" class="logo">
 </header>
 
-<!--#include virtual="/partials/menu.html" -->
+<div id="menu"></div>
+<script>
+fetch("/partials/menu.html")
+  .then(response => response.text())
+  .then(html => {
+      document.getElementById("menu").innerHTML = html;
+  });
+</script>
+
 
 
 <section class="section">
