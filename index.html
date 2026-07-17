@@ -13,8 +13,7 @@
     <img src="images/logo.png" alt="SKHF Logotyp" class="logo">
 </header>
 
-<nav id="menu"></nav>
-
+<div id="menu"></div>
 <script>
 fetch("/partials/menu.html")
   .then(response => response.text())
@@ -22,6 +21,7 @@ fetch("/partials/menu.html")
       document.getElementById("menu").innerHTML = html;
   });
 </script>
+
 
 
 
