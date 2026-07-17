@@ -176,3 +176,105 @@ body {
         font-size: 1.15em;  /* Bättre proportioner */
     }
 }
+
+/* Grundlayout */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Desktopmeny */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Visa undermeny automatiskt på sidan Om föreningen */
+body.om-foreningen .dropdown-content {
+    display: block;
+}
+
+/* Hamburger ikon */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobilmeny */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+        animation: slideDown 0.3s ease;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    /* Mobil-dropdown */
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        border-left: 4px solid #eee;
+        margin-left: 10px;
+        display: none;
+    }
+
+    .dropdown-main {
+        padding: 10px 14px;
+    }
+
+    /* Visa undermeny när man klickar */
+    .dropdown-main:active + .dropdown-content,
+    .dropdown-main:focus + .dropdown-content {
+        display: block;
+    }
+}
+
+/* Animation */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
